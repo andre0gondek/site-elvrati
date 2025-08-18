@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página em Construção</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000;
+      color: #f5ebfa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.3rem;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      background: linear-gradient(90deg, #49225b, #6e3482);
+      color: #f5ebfa;
+      font-weight: bold;
+      padding: 16px 40px;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-5px);
+      background: linear-gradient(90deg, #6e3482, #49225b);
+    }
+
+    /* tema claro */
+    body.light-mode {
+      background-color: #fff;
+      color: #121212;
+    }
+
+    body.light-mode .btn {
+      background: linear-gradient(90deg, #a58ac9, #cdb9f5);
+      color: #121212;
+    }
+
+    body.light-mode .btn:hover {
+      background: linear-gradient(90deg, #cdb9f5, #a58ac9);
+    }
+
+    /* switch de tema */
+    .switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #6e3482;
+      transition: 0.4s;
+      border-radius: 34px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px; bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #f5ebfa;
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
+      background-color: #6e3482;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Página em construção!</h1>
+  <p>Esta página ainda está em beta, portanto não repare demais nela pois precisamos ainda adicionar nossos serviços!</p>
+  <a href="nossosservicos.html" class="btn">Continuar para página</a>
+
+  <!-- Switch de tema -->
+  <label class="switch">
+    <input type="checkbox" id="theme-toggle">
+    <span class="slider round"></span>
+  </label>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleBtn = document.getElementById('theme-toggle');
+      const body = document.body;
+
+      const aplicarTema = tema => {
+        body.classList.toggle('light-mode', tema === 'light');
+        localStorage.setItem('theme', tema);
+      };
+
+      const temaSalvo = localStorage.getItem('theme') || 'dark';
+      aplicarTema(temaSalvo);
+
+      toggleBtn.addEventListener('click', () => {
+        const novoTema = body.classList.contains('light-mode') ? 'dark' : 'light';
+        aplicarTema(novoTema);
+      });
+    });
+  </script>
+</body>
+</html>
