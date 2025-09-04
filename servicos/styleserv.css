@@ -138,3 +138,125 @@ body.light-mode .imagem-servico {
     #toggle-theme:hover {
       background-color: #a56abd;
     }
+
+    /* Estilo do pop-up */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* fundo escurecido */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Conteúdo do pop-up */
+.popup-content {
+  background-color: #1a1a1a;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px #49225b;
+  max-width: 500px;
+  width: 90%;
+  color: #f5ebfa;
+  font-size: 1rem;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Botão de fechar */
+.close-btn {
+  background-color: transparent;
+  border: 2px solid #a56abd;
+  color: #a56abd;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  float: right;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  background-color: #a56abd;
+  color: #1a1a1a;
+}
+
+/* Inputs e select */
+.popup-content input,
+.popup-content select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 20px;
+  border: 1px solid #6e3482;
+  border-radius: 8px;
+  background-color: #000;
+  color: #f5ebfa;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.popup-content input:focus,
+.popup-content select:focus {
+  border-color: #a56abd;
+  outline: none;
+}
+
+/* Botão de envio */
+.popup-content button[type="button"] {
+  background: linear-gradient(90deg, #49225b, #a56abd);
+  color: #011425;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.popup-content button[type="button"]:hover {
+  background: linear-gradient(90deg, #a56abd, #49225b);
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#enviarporemail{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(90deg, #49225b, #a56abd);
+  padding: 17px 40px;
+  color: #011425;
+  text-decoration: none;
+  border-radius: 40px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: inline-block;
+  transition: background 0.3s ease, color 0.3s ease;
+  border: none;
+}
+
+#enviarporemail:hover {
+  background: linear-gradient(90deg, #a56abd, #49225b);
+}
+
+body.light-mode #enviarporemail {
+  background: linear-gradient(90deg, #a58ac9, #cdb9f5);
+  color: #000000;
+}
+
+body.light-mode #enviarporemail:hover {
+  background: linear-gradient(90deg, #cdb9f5, #a58ac9);
+}
