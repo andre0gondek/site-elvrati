@@ -111,6 +111,38 @@
    text-align: center; 
 }
     .instagram iframe { border: none; border-radius: 10px; }
+.instagram {
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center;     /* centraliza verticalmente se tiver altura definida */
+  flex-direction: column;  /* para alinhar o título + embed */
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* deixa o embed adaptável e centralizado */
+.instagram blockquote.instagram-media {
+  margin: 20px auto !important;
+  max-width: 540px !important;
+  width: 100% !important;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+/* fundo no tema escuro */
+body:not(.light-mode) .instagram blockquote.instagram-media {
+  background-color: #000 !important;
+  color: #fff !important;
+  box-shadow: 0 0 15px rgba(110, 52, 130, 0.6);
+}
+
+/* fundo no tema claro */
+body.light-mode .instagram blockquote.instagram-media {
+  background-color: #fff !important;
+  color: #000 !important;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
 
 /* Botão WhatsApp flutuante */
 .whatsapp-float {
@@ -255,44 +287,48 @@ body.light-mode .btn-card:hover {
 
       <!-- Cartão de serviço -->
       <div class="service-card">
-        <img src="imagens/diagnostico-em-dois.png" alt="Diagnóstico" />
-        <h3>Diagnóstico de Problemas</h3>
-        <p>Identificação completa de falhas em computadores e notebooks, com relatório detalhado e soluções recomendadas.</p>   
+        <img src="imagens/servicos/trocadetela.jpeg" alt="TrocaDeTela" />
+        <h3>Troca de tela de um Asus Vivobook 15</h3>
+        <p>Este serviço foi realizado com total cautela, mas com muita precisão conseguimos arrumar a tela do notebook do cliente, de forma eficiente!</p>   
       </div>
 
       <div class="service-card">
-        <img src="imagens/limpeza-brutaA.jpeg" alt="Limpeza" />
-        <h3>Limpeza e Higienização</h3>
-        <p>Serviço completo de limpeza interna e externa de computadores e notebooks, garantindo melhor desempenho e durabilidade.</p>
+        <img src="imagens/servicos/reparo.jpeg" alt="Sistema" />
+        <h3>Substituindo Sistema Operacional</h3>
+        <p>Todos sabemos que o Windows é mais intuitivo que o Linux. No caso desse cliente, ele estava cansado do Sistema e quis colocar um
+          mais simples. A solução foi instalar e ativar o Windows 11!
+        </p>
       </div>
 
       <div class="service-card">
-        <img src="imagens/montagem.png" alt="Montagem" />
+        <img src="imagens/servicos/montagem.jpeg" alt="Montagem" />
         <h3>Montagem e Upgrade de PCs</h3>
-        <p>Montagem personalizada e upgrades de hardware para melhorar performance, jogos, ou uso profissional.</p>
+        <p>Cliente pediu para montarmos um novo PC Gamer para ele! Nossa maior especialidade é essa, então não houve problema algum para nós!</p>
       </div>
 
       <div class="service-card">
-        <img src="imagens/manutencao.png" alt="Manutenção" />
+        <img src="imagens/servicos/windows.jpeg" alt="Manutenção" />
         <h3>Manutenção de Equipamentos</h3>
-        <p>Reparos em computadores e notebooks, troca de peças, conserto de problemas elétricos e de software.</p>
+        <p>Fizemos o reparo completo do notebook que estava muito lento! Trocamos a pasta térmica da máquina que estava <em>mumificada</em>, 
+          apagamos arquivos inutilizaveis e pronto! Cliente satisfeito.</p>
       </div>
 
       <div class="service-card">
-        <img src="imagens/otimizacao.png" alt="Otimização" />
-        <h3>Otimização de Sistemas</h3>
-        <p>Melhoria de desempenho do sistema operacional, remoção de arquivos desnecessários e ajustes avançados para velocidade máxima.</p>
+        <img src="imagens/servicos/limpeza.jpeg" alt="Otimização" />
+        <h3>Limpeza interna completa</h3>
+        <p>Sempre é bom fazer uma higienização no computador, não é mesmo? Outra especialidade nossa é essa! Deixar seu computador zerado, 
+          parecendo que acabou de comprar, afinal, todos gostamos de algo novinho em folha não é?!
+        </p>
       </div>
 
     </div>
   </section>
 
     <section class="instagram">
-      <h2><i class="fa-brands fa-instagram"></i> Acompanhe nosso Instagram</h2>
+      <h2><h3><a href="https://www.instagram.com/elvra_ti/" target="_blank"><i class="fa-brands fa-instagram"></i> Acompanhe nosso Instagram</a></h3> </h2>
       <p>Confira alguns dos trabalhos que já realizamos!</p>
-      <div class="insta-embed">
-        <iframe src="https://www.instagram.com/p/CxxXXX/embed" width="400" height="480"></iframe>
-      </div>
+    
+      <br><br>
     </section>
 
 
