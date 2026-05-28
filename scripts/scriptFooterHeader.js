@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. CARREGA O CABEÇALHO
+  // 1. CARREGA O CABEÇALHO (Adicionada a barra "/" para caminho absoluto)
   const headerContainer = document.getElementById("main-header");
   if (headerContainer) {
-    fetch("header.html")
+    fetch("/header.html")
       .then(response => {
         if (!response.ok) throw new Error("Não foi possível encontrar o arquivo header.html");
         return response.text();
@@ -15,10 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch(err => console.error("Erro no Header:", err));
   }
 
-  // 2. CARREGA O RODAPÉ
+  // 2. CARREGA O RODAPÉ (Adicionada a barra "/" para caminho absoluto)
   const footerContainer = document.getElementById("main-footer");
   if (footerContainer) {
-    fetch("footer.html")
+    fetch("/footer.html")
       .then(response => {
         if (!response.ok) throw new Error("Não foi possível encontrar o arquivo footer.html");
         return response.text();
@@ -68,6 +68,7 @@ function inicializarControleTema() {
 function sincronizarLogoComTema() {
   const logos = document.querySelectorAll('.logo');
   const corpoModoClaro = document.body.classList.contains('light-mode');
-  const logoSrc = corpoModoClaro ? 'imagens/logo-clara.png' : 'imagens/logo-escura.png';
+  // Corrigido adicionando "/" no início para a hospedagem achar a pasta de imagens independente da rota
+  const logoSrc = corpoModoClaro ? '/imagens/logo-clara.png' : '/imagens/logo-escura.png';
   logos.forEach(logo => { logo.src = logoSrc; });
 }
