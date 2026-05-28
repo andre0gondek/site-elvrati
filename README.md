@@ -47,3 +47,13 @@ O projeto foi construído utilizando tecnologias nativas da Web para garantir o 
 └── scripts/
     ├── indexScript.js       # Comportamentos específicos da Home
     └── scriptFooterHeader.js # Lógica de injeção assíncrona dos templates e tema
+
+## 📝 Padronização de Commits
+
+Este repositório utiliza a especificação de **[Conventional Commits](https://www.conventionalcommits.org/)** para manter o histórico de alterações limpo e legível. Cada commit é categorizado de acordo com o propósito da alteração (ex: `feat:`, `fix:`, `refactor:`, `style:`).
+
+---
+
+## 👤 Autor
+
+* **André Mendes** — *Idealização, Design e Desenvolvimento Técnico* — [Seu GitHub](https://github.com/andre0gondek)
