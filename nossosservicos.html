@@ -3,396 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Serviços - Elvra T.I</title>
+  <title>Portfólio de Serviços - Elvra T.I</title>
   <link rel="icon" href="imagens/icon.png" type="image/png">
-  <link rel="stylesheet" href="stylefooter.css">
+  <link rel="stylesheet" href="styles/nossosServicos.css">
+  <link rel="stylesheet" href="styles/styleHeader.css">
+  <link rel="stylesheet" href="styles/styleFooter.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-  background-color: #000;
-  color: #f5ebfa;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.btn-voltar {
-      display: inline-block;
-      margin: 50px;
-      margin-bottom: 40px;
-      background: none;
-      border: 2px solid #a56abd;
-      padding: 10px 20px;
-      font-size: 1rem;
-      color: #a56abd;
-      border-radius: 30px;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .btn-voltar:hover {
-      background-color: #a56abd;
-      color: #190019;
-    }
-/* Seção Serviços */
-#servicos {
-  padding: 100px 80px;
-}
-
-#servicos h1 {
-  font-size: 3rem;
-  margin-bottom: 60px;
-  border-left: 6px solid #6e3482;
-  padding-left: 20px;
-}
-
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-.service-card {
-  background: #1a1a1a;
-  border-radius: 12px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 0 20px rgba(0,0,0,0.4);
-  transition: transform 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-}
-
-.service-card img {
-  width: 200px;   /* aumentei de 100px para 180px */
-  height: 200px;  /* aumentei de 100px para 180px */
-  object-fit: contain;
-  margin-bottom: 20px;
-}   
-
-.service-card h3 {
-  color: #a56abd;
-  margin-bottom: 10px;
-}
-
-.service-card p {
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
-
-.btn-card {
-  display: inline-block;
-  background: linear-gradient(90deg, #49225b, #6e3482);
-  color: #f5ebfa;
-  padding: 10px 25px;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.btn-card:hover {
-  transform: translateY(-3px);
-  background: linear-gradient(90deg, #6e3482, #49225b);
-}
-
-.instagram {
-   margin-top: 60px;
-   text-align: center; 
-}
-    .instagram iframe { border: none; border-radius: 10px; }
-.instagram {
-  display: flex;
-  justify-content: center; /* centraliza horizontalmente */
-  align-items: center;     /* centraliza verticalmente se tiver altura definida */
-  flex-direction: column;  /* para alinhar o título + embed */
-  margin: 40px auto;
-  text-align: center;
-}
-
-/* deixa o embed adaptável e centralizado */
-.instagram blockquote.instagram-media {
-  margin: 20px auto !important;
-  max-width: 540px !important;
-  width: 100% !important;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: background-color 0.3s ease;
-}
-
-/* fundo no tema escuro */
-body:not(.light-mode) .instagram blockquote.instagram-media {
-  background-color: #000 !important;
-  color: #fff !important;
-  box-shadow: 0 0 15px rgba(110, 52, 130, 0.6);
-}
-
-/* fundo no tema claro */
-body.light-mode .instagram blockquote.instagram-media {
-  background-color: #fff !important;
-  color: #000 !important;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Botão WhatsApp flutuante */
-.whatsapp-float {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  width: 75px;
-  height: 75px;
-  background-color: #1a1a1a;
-  color: #8e44ad;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 38px;
-  box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
-  z-index: 1000;
-  transition: transform 0.2s ease-in-out, opacity 0.3s ease-in-out;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.15);
-  background-color: #8e44ad;
-  color: #000;
-}
-
-/* Tema claro */
-body.light-mode {
-  background-color: #fff;
-  color: #121212;
-}
-
-body.light-mode .btn-voltar{
-    color: #6e3482;
-    border-color: #6e3482;
-}
-
-body.light-mode .btn-voltar:hover{
-    background-color: #6e3482;
-    color: #fff;
-}
-
-body.light-mode .service-card {
-  background: #eaeaea;
-  color: #121212;
-  box-shadow: 0 0 20px rgba(100,100,100,0.2);
-}
-
-body.light-mode .btn-card {
-  background: linear-gradient(90deg, #a58ac9, #cdb9f5);
-  color: #121212;
-}
-
-body.light-mode .service-card h3{
-  color: #49225b;
-}
-
-body.light-mode .btn-card:hover {
-  background: linear-gradient(90deg, #cdb9f5, #a58ac9);
-}
-
-/* Responsividade */
-@media(max-width: 768px){
-  #servicos {
-    padding: 60px 20px;
-  }
-  .services {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* interruptor */
-    .switch {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      display: inline-block;
-      width: 50px;
-      height: 24px;
-      z-index: 1000;
-    }
-
-    .switch input {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-
-    .slider {
-      position: absolute;
-      cursor: pointer;
-      top: 0; left: 0;
-      right: 0; bottom: 0;
-      background-color: #6e3482;
-      transition: 0.4s;
-      border-radius: 34px;
-    }
-
-    .slider:before {
-      position: absolute;
-      content: "";
-      height: 18px;
-      width: 18px;
-      left: 3px;
-      bottom: 3px;
-      background-color: white;
-      transition: 0.4s;
-      border-radius: 50%;
-    }
-
-    input:checked + .slider {
-      background-color: #f5ebfa;
-    }
-
-    input:checked + .slider:before {
-      transform: translateX(26px);
-      background-color: #6e3482;
-    }
-
-  </style>
 </head>
 <body>
 
-  <!-- Botão flutuante WhatsApp -->
-  <a href="https://wa.me/5511961876851?text=Olá! Gostaria de realizar um atendimento com vocês." 
+  <a href="https://wa.me/5511961876851?text=Olá! Gostaria de tirar uma dúvida sobre suporte em TI." 
      class="whatsapp-float" 
      target="_blank" 
      id="whatsapp-btn">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
-  <a href="index.html" class="btn-voltar"><i class="fa-solid fa-house"></i> Home</a>
+  <header class="topo" id="main-header"></header>
 
-  <label class="switch">
-    <input type="checkbox" id="toggle-theme"> 
-    <span class="slider round"></span>
-  </label>
+  <main class="nossos-servicos-wrapper">
+    <section id="servicos">
+      <h1>Trabalhos Realizados</h1>
+      <div class="services">
 
-  <section id="servicos">
-    <h1>Nossos Serviços</h1>
-    <div class="services">
+        <div class="service-card">
+          <img src="imagens/servicos/trocadetela.jpeg" alt="Troca de Tela Asus" />
+          <h3>Troca de Tela - Asus Vivobook 15</h3>
+          <p>Serviço realizado com total cautela e precisão técnica. Conseguimos restaurar a qualidade visual do notebook de forma ágil e extremamente eficiente.</p> 
+          <a href="https://wa.me/5511961876851?text=Olá! Vi seu portfólio e preciso fazer a Troca de Tela de um notebook." target="_blank" class="btn-card">Quero este serviço</a>
+        </div>
 
-      <!-- Cartão de serviço -->
-      <div class="service-card">
-        <img src="imagens/servicos/trocadetela.jpeg" alt="TrocaDeTela" />
-        <h3>Troca de tela de um Asus Vivobook 15</h3>
-        <p>Este serviço foi realizado com total cautela, mas com muita precisão conseguimos arrumar a tela do notebook do cliente, de forma eficiente!</p>   
+        <div class="service-card">
+          <img src="imagens/servicos/reparo.jpeg" alt="Instalação de Sistema" />
+          <h3>Substituição de Sistema Operacional</h3>
+          <p>Para quem busca uma experiência mais fluida e intuitiva, a transição de sistemas é o ideal. Realizei a instalação limpa e a configuração completa do Windows 11 para otimizar o uso do cliente.</p>
+          <a href="https://wa.me/5511961876851?text=Olá! Vi seu portfólio e gostaria de agendar a Instalação/Troca de Sistema Operacional." target="_blank" class="btn-card">Quero este serviço</a>
+        </div>
+
+        <div class="service-card">
+          <img src="imagens/servicos/montagem.jpeg" alt="Montagem de PC" />
+          <h3>Montagem Completa de PC Gamer</h3>
+          <p>Montagem sob medida executada com gerenciamento rigoroso de cabos (cable management) e teste de estresse dos componentes. Uma das minhas maiores especialidades práticas.</p>
+          <a href="https://wa.me/5511961876851?text=Olá! Vi seu portfólio e gostaria de fazer um orçamento para Montagem de PC Gamer." target="_blank" class="btn-card">Quero este serviço</a>
+        </div>
+
+        <div class="service-card">
+          <img src="imagens/servicos/windows.jpeg" alt="Manutenção Avançada" />
+          <h3>Manutenção Corretiva em Notebook</h3>
+          <p>Reparo completo de hardware em máquina com alto índice de lentidão. Realizei a substitution da pasta térmica antiga (que já estava totalmente ressecada), limpeza física e otimização lógica do sistema.</p>
+          <a href="https://wa.me/5511961876851?text=Olá! Vi seu portfólio e preciso de uma Manutenção/Reparo completo no meu notebook." target="_blank" class="btn-card">Quero este serviço</a>
+        </div>
+
+        <div class="service-card">
+          <img src="imagens/servicos/limpeza.jpeg" alt="Higienização de Hardware" />
+          <h3>Limpeza Interna Completa</h3>
+          <p>Higienização profunda contra oxidação e acúmulo de poeira. Essencial para manter as temperaturas sob controle e prolongar consideravelmente a vida útil das peças do seu computador.</p>
+          <a href="https://wa.me/5511961876851?text=Olá! Vi seu portfólio e quero agendar uma Limpeza Interna Completa no meu computador." target="_blank" class="btn-card">Quero este serviço</a>
+        </div>
+
       </div>
-
-      <div class="service-card">
-        <img src="imagens/servicos/reparo.jpeg" alt="Sistema" />
-        <h3>Substituindo Sistema Operacional</h3>
-        <p>Todos sabemos que o Windows é mais intuitivo que o Linux. No caso desse cliente, ele estava cansado do Sistema e quis colocar um
-          mais simples. A solução foi instalar e ativar o Windows 11!
-        </p>
-      </div>
-
-      <div class="service-card">
-        <img src="imagens/servicos/montagem.jpeg" alt="Montagem" />
-        <h3>Montagem e Upgrade de PCs</h3>
-        <p>Cliente pediu para montarmos um novo PC Gamer para ele! Nossa maior especialidade é essa, então não houve problema algum para nós!</p>
-      </div>
-
-      <div class="service-card">
-        <img src="imagens/servicos/windows.jpeg" alt="Manutenção" />
-        <h3>Manutenção de Equipamentos</h3>
-        <p>Fizemos o reparo completo do notebook que estava muito lento! Trocamos a pasta térmica da máquina que estava <em>mumificada</em>, 
-          apagamos arquivos inutilizaveis e pronto! Cliente satisfeito.</p>
-      </div>
-
-      <div class="service-card">
-        <img src="imagens/servicos/limpeza.jpeg" alt="Otimização" />
-        <h3>Limpeza interna completa</h3>
-        <p>Sempre é bom fazer uma higienização no computador, não é mesmo? Outra especialidade nossa é essa! Deixar seu computador zerado, 
-          parecendo que acabou de comprar, afinal, todos gostamos de algo novinho em folha não é?!
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-    <section class="instagram">
-      <h2><h3><a href="https://www.instagram.com/elvra_ti/" target="_blank"><i class="fa-brands fa-instagram"></i> Acompanhe nosso Instagram</a></h3> </h2>
-      <p>Confira alguns dos trabalhos que já realizamos!</p>
-    
-      <br><br>
     </section>
 
+    <section class="instagram">
+      <h2>
+        <a href="https://www.instagram.com/elvra_ti/" target="_blank">
+          <i class="fa-brands fa-instagram"></i> Acompanhe o meu Instagram
+        </a>
+      </h2>
+      <p>Confira de perto os bastidores diários e os trabalhos que coloco no ar!</p>
+    </section>
+  </main>
 
+  <footer class="footer" id="main-footer"></footer>
 
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-box">
-        <img src="imagens/logo-escura.png" alt="Logo" class="logo">
-      </div>
-      <div class="footer-box">
-        <h4>Links Rápidos</h4>
-        <ul>
-          <li><a href="index.html">Início</a></li>
-          <li><a href="index.html#sobre-nos">Sobre Nós</a></li>
-          <li><a href="servicos.html">Catálogo</a></li>
-          <li><a href="https://wa.me/5511961876851?text=Olá!" target="_blank">Atendimento</a></li>
-          <li><a href="https://www.instagram.com/elvra_ti/" target="_blank">Instagram</a></li>
-          <li><a href="https://www.linkedin.com/company/108629592/" target="_blank">LinkedIn</a></li>
-        </ul>
-      </div>
-      <div class="footer-box">
-        <h4>Contato</h4>
-        <ul>
-          <li>Email: contato@elvrati.com.br</li>
-          <li>WhatsApp: (11) 96187-6851</li>
-        </ul>
-        <h4>Endereço</h4>
-        <p>R. Manoel Martins da Rocha, 579 - Jardim Mangalot, São Paulo - SP</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 Elvra - Soluções em T.I — Todos os direitos reservados.</p>
-    </div>
-  </footer>
-
-  <script>
-  document.addEventListener("DOMContentLoaded", () => {
-  const toggleThemeCheckbox = document.getElementById('toggle-theme');
-  const logos = document.querySelectorAll('.logo'); // pega todas as logos (header e footer)
-
-  // Função para atualizar as logos conforme o tema
-  const atualizarLogos = (tema) => {
-    const logoSrc = tema === 'light' ? 'imagens/logo-clara.png' : 'imagens/logo-escura.png';
-    logos.forEach(logo => logo.src = logoSrc);
-  };
-
-  // Função para aplicar tema
-  const aplicarTema = (tema) => {
-    document.body.classList.toggle('light-mode', tema === 'light');
-    if (toggleThemeCheckbox) toggleThemeCheckbox.checked = tema === 'light';
-    atualizarLogos(tema);
-    localStorage.setItem('theme', tema);
-  };
-
-  // Aplica tema salvo ou dark por padrão
-  aplicarTema(localStorage.getItem('theme') || 'dark');
-
-  // Alterna tema pelo switch
-  if (toggleThemeCheckbox) {
-    toggleThemeCheckbox.addEventListener('change', () => {
-      aplicarTema(toggleThemeCheckbox.checked ? 'light' : 'dark');
-    });
-  }
-});
-  </script>
+  <script src="scripts/nossosServicosScript.js"></script>
+  <script src="scripts/scriptFooterHeader.js"></script>
 </body>
 </html>
